@@ -60,6 +60,7 @@
                 <th scope="col">nim</th>
                 <th scope="col">nama</th>
                 <th scope="col">jurusan</th>
+                <th scope="col">Action</th>
             </tr>
             </thead>
             <tbody>
@@ -67,6 +68,9 @@
                 <td th:text="${mhs.nim}"></td>
                 <td th:text="${mhs.name}"></td>
                 <td th:text="${mhs.jurusan}"></td>
+                <td>
+                    <a th:href="|@{/mahasiswa/edit/${mhs.id}}|"><span class="glyphicon glyphicon-edit">Edit</span></a>
+                </td>
             </tr>
             </tbody>
         </table>

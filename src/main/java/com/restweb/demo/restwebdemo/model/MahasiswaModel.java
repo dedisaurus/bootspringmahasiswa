@@ -1,9 +1,6 @@
 package com.restweb.demo.restwebdemo.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class MahasiswaModel {
@@ -14,6 +11,10 @@ public class MahasiswaModel {
     private String Name;
     private String Jurusan;
     private String nim;
+
+    @Version
+    @Column(name = "optVersion", columnDefinition = "Integer Default 0")
+    private Integer version;
 
     public Integer getId() {
         return Id;
@@ -45,5 +46,13 @@ public class MahasiswaModel {
 
     public void setNim(String nim) {
         this.nim = nim;
+    }
+
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
     }
 }
