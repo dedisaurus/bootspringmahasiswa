@@ -9,4 +9,5 @@ public interface MahasiswaService {
     List<MahasiswaModel> listMahasiswa();
     MahasiswaModel saveOrUpdateDataMhs(MahasiswaModel mahasiswaModel);
     MahasiswaModel getIdMahasiswa(Integer Id);
+    void hapusData(Integer Id);
 }

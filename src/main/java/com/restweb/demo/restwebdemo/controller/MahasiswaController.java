@@ -41,9 +41,17 @@ public class MahasiswaController {
         return "redirect:/mahasiswa";
     }
 
+    //show edit data
     @RequestMapping(value = "/mahasiswa/edit/{id}", method = RequestMethod.GET)
     public String editData(@PathVariable Integer id, Model model){
         model.addAttribute("mahasiswa",mahasiswaService.getIdMahasiswa(id));
         return "formMahasiswa";
     }
+
+    @RequestMapping(value = "/mahasiswa/hapus/{id}")
+    public String hapusData(@PathVariable Integer id){
+        mahasiswaService.hapusData(id);
+        return "redirect:/mahasiswa";
+    }
+
 }

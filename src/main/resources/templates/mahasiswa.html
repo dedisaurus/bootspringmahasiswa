@@ -70,6 +70,8 @@
                 <td th:text="${mhs.jurusan}"></td>
                 <td>
                     <a th:href="${'/mahasiswa/edit/'+mhs.id}"><span class="glyphicon glyphicon-edit">Edit</span></a>
+
+                    <a th:href="${'/mahasiswa/hapus/'+mhs.id}"><span class="glyphicon glyphicon-edit">Hapus</span></a>
                 </td>
             </tr>
             </tbody>
